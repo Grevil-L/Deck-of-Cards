@@ -15,14 +15,15 @@ import java.util.List;
  */
 public class CardOperations {
     private boolean shuffled = false;
-    private Deque<String> deque;
+    private Deque<String> shuffledDeck;
+    int i=1;
 
     public CardOperations() {
     }
 
-    public void shuffle(List deck) {
-//        deque = new ArrayDeque<String>(deck);
+    public void shuffle(List deck) {    
         Collections.shuffle(deck);
+        shuffledDeck = new ArrayDeque<String>(deck);
         
     }
 
@@ -31,7 +32,14 @@ public class CardOperations {
         shuffle(deck);
         shuffled = true;
         }
-        System.out.println(deck);
+//        System.out.println(shuffledDeck);
+
+while(shuffledDeck.isEmpty() == false){
+    
+        System.out.println(i + " " + shuffledDeck.pop());
+        i++;
+        dealOneCard(deck);
+}
     }
 
 }
