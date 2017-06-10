@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This is the main class
  *
  * @author Grevil Lopes
  */
@@ -12,9 +13,11 @@ public class Driver {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         String[] suits = {"hearts", "spades", "clubs", "diamonds"};
         List<String> deck = new ArrayList<>();
 
+        //creating and adding cards to deck
         for (String suit : suits) {
             deck.add(suit + "-Ace");
             for (int i = 2; i <= 10; i++) {
