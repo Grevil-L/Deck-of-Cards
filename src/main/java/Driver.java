@@ -13,23 +13,23 @@ public class Driver {
     public static void main(String[] args) {
         String[] suites = {"hearts", "spades", "clubs", "diamonds"};
         List<String> deck = new ArrayList<String>();
-        
-        for(String suit: suites){
-            deck.add(suit + "-Ace"); 
-            for(int i=2; i<=10; i++){
+
+        for (String suit : suites) {
+            deck.add(suit + "-Ace");
+            for (int i = 2; i <= 10; i++) {
                 deck.add(suit + "-" + i);
             }
             deck.add(suit + "-Jack");
             deck.add(suit + "-Queen");
             deck.add(suit + "-King");
-            
-            
-            
         }
-        System.out.println(deck);
 
+        System.out.println(deck);
+        
+        Collections.shuffle(deck);
+        
+        System.out.println(deck);
 
     }
 
 }
-
