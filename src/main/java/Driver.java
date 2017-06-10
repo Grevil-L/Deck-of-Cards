@@ -1,4 +1,7 @@
-
+/**
+ *
+ * @author Grevil Lopes
+ */
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,9 +29,13 @@ public class Driver {
 
         System.out.println(deck);
         
-        Collections.shuffle(deck);
+        CardOperations deal = new CardOperations();
+        deal.dealOneCard(deck);
         
-        System.out.println(deck);
+//        public void shuffle(){
+//           Collections.shuffle(deck); 
+//           System.out.println(deck);
+//        }
 
     }
 
